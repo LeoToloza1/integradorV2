@@ -33,7 +33,7 @@ app.get('/preguntas', async (req, res) => {
 
 app.use('/', async (req, res) => {
   try {
-    res.send("Hola Mundo");
+    console.log("Hola mundo - app.js linea 36")
   } catch (error) {
     console.error('Error al generar las preguntas:', error);
     res.render('error');

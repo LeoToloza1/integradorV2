@@ -9,7 +9,6 @@ let respCorrectas = 0;
 let respIncorrectas = 0;
 let preguntaActual = 0;
 async function recibirDatos() {
-
   try {
     const response = await fetch('/preguntas');
     console.log('Datos cargados');

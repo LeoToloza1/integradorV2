@@ -31,7 +31,7 @@ iniciarJuegoBtn.addEventListener('click', () => {
 
 // Función para mostrar la pregunta actual en el HTML
 function mostrarPreguntaActual() {
-  console.log(datos)
+ // console.log(datos)
   const pregunta = datos.preguntas[preguntaActual];
   //console.log("linea28: "+pregunta.tipo) hasta aca, todo bien
   preguntaElement.innerHTML = `<h2 class="display-2 text-center">${pregunta.texto}</h2>`;

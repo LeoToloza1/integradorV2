@@ -1,5 +1,5 @@
-require('dotenv').config();
-
+import dotenv from 'dotenv';
+dotenv.config();
 export const baseUrl =
   process.env.NODE_ENV === 'production'
     ? 'https://web2-integrador.onrender.com'

@@ -1,9 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
-export const baseUrl =
-  process.env.NODE_ENV === 'production'
-    ? 'https://web2-integrador.onrender.com'
-    : '/';
+import cors from "cors";
 import express from 'express';
 import { join } from 'path';
 import cookieParser from 'cookie-parser';
@@ -12,15 +9,20 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import createError from 'http-errors';
 import router from "./rutas/rutas.js";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(join(__dirname, 'public')));
+app.use(cors());
+export const baseUrl =
+  process.env.NODE_ENV === 'production'
+    ? process.env.BASE_URL
+    : '/';
 
 app.use(baseUrl, router);
 

@@ -3,6 +3,10 @@ import { generarPreguntas } from '../../scripts/index.mjs';
 
 const router = Router();
 
+router.get('/',(req,res)=>{
+  res.send('Hola')
+});
+
 router.get('/preguntas', async (req, res) => {
     try {
       const preguntas = await generarPreguntas();

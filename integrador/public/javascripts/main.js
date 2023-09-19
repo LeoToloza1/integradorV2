@@ -13,7 +13,7 @@ async function recibirDatos() {
     const response = await fetch('/preguntas');
     console.log('Datos cargados');
     datos = await response.json();
-    //console.log(preguntas); // aca llegan las preguntas del servidor
+    console.log(datos); // aca llegan las preguntas del servidor
   } catch (error) {
     console.error('Error al cargar datos:', error);
   }

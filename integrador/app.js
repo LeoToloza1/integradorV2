@@ -10,8 +10,9 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import createError from 'http-errors'; // Importa createError
+import createError from 'http-errors';
 import router from "./rutas/rutas.js";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();

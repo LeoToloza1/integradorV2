@@ -8,7 +8,7 @@ const cargarDatos = async () => {
   try {
     const resultados = await fetch(paisesUrl);
     datos = await resultados.json();
-    console.log("Datos cargados exitosamente - desde el backend");
+   // console.log("Datos cargados exitosamente - desde el backend");
   } catch (error) {
     console.error("Error al obtener datos de los países:", error);
   }
@@ -20,7 +20,7 @@ const generarPreguntas = async () => {
   const preguntas = obtenerPreguntas(); // Genera preguntas utilizando la función obtenerPreguntas
   mezclarOpciones();
   iniciarJuego();
- // console.log("preguntas en index.js - backend:" + preguntas);
+ console.log("preguntas en index.js - backend:");
   return preguntas;
 };
 
